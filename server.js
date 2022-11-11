@@ -1,4 +1,5 @@
 const express = require('express')
+const seed = require('./seed')
 const showsRouter = require('./routes/shows')
 const userRouter = require('./routes/users')
 const app = express()
