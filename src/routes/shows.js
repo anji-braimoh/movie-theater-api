@@ -1,6 +1,7 @@
 const {Router} = require ('express')
 const showsRouter = Router()
 const Shows = require ("../models/Show")
+const middleware = require("../middleware/middleware")
 
 showsRouter.get("/",async (req,res) => {
     const shows = await Shows.findAll()
