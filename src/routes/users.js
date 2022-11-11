@@ -1,20 +1,20 @@
 const express = require ('express')
 const userRouter = express.Router()
-const User = require ("../models/User")
+const User = require ("../../models/User")
 
-userRouter.get("/",(req,res) => {
+userRouter.get("/",async(req,res) => {
     res.send("Successful GET Request made!")
 })
 
-userRouter.get("/id",(req,res) => {
+userRouter.get("/id",async (req,res) => {
     res.send("Successful GET Request made!")
 })
 
-userRouter.get("/id/shows",(req,res) => {
+userRouter.get("/id/shows",async (req,res) => {
     res.send("Successful GET Request made!")
 })
 
-userRouter.put("/id/shows",(req,res) => {
+userRouter.put("/id/shows",async (req,res) => {
     res.send("Successful PUT Request made!")
 })
 
