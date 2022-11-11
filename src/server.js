@@ -1,10 +1,10 @@
 const express = require('express')
-const db = require ("../db/db")
-const showsRouter = require('../routes/shows')
-const userRouter = require('../routes/users')
+const db = require ("./db/db")
+const showsRouter = require('./routes/shows')
+const userRouter = require('./routes/users')
 const app = express()
 const port = 3000
-const seed = require("../seed")
+const seed = require("./seed")
 
 function lengthAndError (req,res,next){
 

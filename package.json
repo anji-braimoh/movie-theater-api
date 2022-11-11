@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/anji-braimoh/movie-theater-api/issues"
   },
-  "homepage": "https://github.com/anji-braimoh/movie-theater-api#readme"
+  "homepage": "https://github.com/anji-braimoh/movie-theater-api#readme",
+  "devDependencies": {}
 }
