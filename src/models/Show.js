@@ -1,16 +1,30 @@
 //import our db, Model, DataTypes
-const { db, DataTypes, Model } = require('../db/db')
+const {DataTypes, Model } = require('sequelize')
+const db = require("../db/db")
 class Show extends Model {}
 
 //Creating a User child class from the Model parent class
-const Show = db.define("shows", {
-    title: DataTypes.STRING,
-    genre: DataTypes.ENUM("Comedy", "Drama", "Horror", "Sitcom"),
-    rating: DataTypes.INTEGER,
-    status: DataTypes.STRING,
+Show.init( 
+    {
+    title: {
+        type:DataTypes.STRING,
+    },
+    genre: {
+        type:DataTypes.ENUM("Comedy", "Drama", "Horror", "Sitcom"),
+    },
+    rating: {
+        type:DataTypes.INTEGER,
+    },
+    status:{
+        type:DataTypes.STRING,
+    },
+},
+
+    {
     sequelize:db ,
-    modelName : "Shows"
-});
+    modelName : "Show"
+    }
+);
 
 //exports
 module.exports = { Show }

@@ -4,6 +4,7 @@ const showsRouter = require('../routes/shows')
 const userRouter = require('../routes/users')
 const app = express()
 const port = 3000
+const seed = require("../seed")
 
 
 app.use (express.json())
