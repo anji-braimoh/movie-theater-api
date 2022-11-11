@@ -1,10 +1,11 @@
 const express = require('express')
+const showsRouter = require('./routes/shows')
+const userRouter = require('./routes/users')
 const app = express()
 const port = 3000
 
+app.use("/users",userRouter)
+app.use("/shows",showsRouter)
 
 
-app.listen (port, () => {
-    console.log ('Server listening on port 3000' )
-
-})
+module.exports = showsRouter, userRouter,app
