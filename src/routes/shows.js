@@ -1,7 +1,6 @@
 const {Router} = require ('express')
 const showsRouter = Router()
 const Shows = require ("../models/Show")
-const middleware = require("../middleware/middleware")
 
 showsRouter.get("/",async (req,res) => {
     const shows = await Shows.findAll()
@@ -18,7 +17,7 @@ showsRouter.get("/:id",async (req,res) => {
 })
 
 showsRouter.get("/:genre",async (req,res) => {
-    const show =await Shows.findAll({where:{genre:req.params.genre}})
+    const show =await Shows.findByPk(req.params.genre)
      res.send(shows[req.params.genre]) 
   })
   
