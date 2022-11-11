@@ -23,7 +23,7 @@ showsRouter.get("/:genre",async (req,res) => {
   })
   
 
-showsRouter.put("/:id/:rating",async (req,res) => {
+showsRouter.put("/:id/:rating",lengthAndError(),async (req,res) => {
     const show = await Shows.findByPk(req.params.id)
     if (show===true){
         await Show.update(
@@ -36,7 +36,7 @@ showsRouter.put("/:id/:rating",async (req,res) => {
     }
 })
 
-showsRouter.put("/:id/:status",async (req,res) => {
+showsRouter.put("/:id/:status",checkEmpty(),async (req,res) => {
     const show = await Shows.findByPk(req.params.id)
     if (show===true){
         await Shows.update(
